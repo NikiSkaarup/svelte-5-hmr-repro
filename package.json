@@ -1,45 +1,54 @@
 {
-  "name": "svelte-5-hmr-repro",
-  "version": "0.0.2",
-  "private": true,
-  "type": "module",
-  "scripts": {
-    "start": "bun run ./build",
-    "dev": "bunx --bun vite dev",
-    "build": "bunx --bun vite build",
-    "preview": "bunx --bun vite preview",
-    "build:preview": "bunx --bun vite build && PORT=5173 bun ./build",
-    "check": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json",
-    "check:watch": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json --watch",
-    "lint": "prettier --check . && eslint .",
-    "format": "prettier --write ."
-  },
-  "devDependencies": {
-    "@sveltejs/kit": "^2.5.5",
-    "@sveltejs/vite-plugin-svelte": "^3.1.0",
-    "@tailwindcss/vite": "^4.0.0-alpha.14",
-    "@types/bun": "latest",
-    "eslint": "^9.0.0",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-svelte": "^2.36.0",
-    "prettier": "^3.2.5",
-    "prettier-plugin-svelte": "^3.2.2",
-    "prettier-plugin-tailwindcss": "^0.5.13",
-    "svelte": "5.0.0-next.97",
-    "svelte-adapter-bun": "^0.5.2",
-    "svelte-check": "^3.6.9",
-    "tailwindcss": "^4.0.0-alpha.14",
-    "typescript": "^5.4.5",
-    "vite": "^5.2.8"
-  },
-  "dependencies": {
-    "bits-ui": "^0.21.2",
-    "clsx": "^2.1.0",
-    "mode-watcher": "^0.3.0",
-    "svelte-radix": "^1.1.0",
-    "tailwind-merge": "^2.2.2",
-    "tailwind-variants": "^0.2.1",
-    "vaul-svelte": "^0.3.0"
-  },
-  "trustedDependencies": ["@sveltejs/kit", "esbuild", "es5-ext", "svelte-preprocess"]
+	"name": "svelte-5-hmr-repro",
+	"version": "0.0.2",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"start": "pnpm run ./build",
+		"dev": "pnpm vite dev",
+		"build": "pnpm vite build",
+		"preview": "pnpm vite preview",
+		"start:bun": "bun run ./build",
+		"dev:bun": "bunx --bun vite dev",
+		"build:bun": "bunx --bun vite build",
+		"preview:bun": "bunx --bun vite preview",
+		"build:preview": "bunx --bun vite build && PORT=5173 bun ./build",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json --watch",
+		"lint": "prettier --check . && eslint .",
+		"format": "prettier --write ."
+	},
+	"devDependencies": {
+		"@sveltejs/adapter-node": "^5.0.1",
+		"@sveltejs/kit": "^2.5.5",
+		"@sveltejs/vite-plugin-svelte": "^3.1.0",
+		"@tailwindcss/vite": "^4.0.0-alpha.14",
+		"@types/bun": "latest",
+		"eslint": "^9.0.0",
+		"eslint-config-prettier": "^9.1.0",
+		"eslint-plugin-svelte": "^2.36.0",
+		"prettier": "^3.2.5",
+		"prettier-plugin-svelte": "^3.2.2",
+		"prettier-plugin-tailwindcss": "^0.5.13",
+		"svelte": "5.0.0-next.99",
+		"svelte-adapter-bun": "^0.5.2",
+		"svelte-check": "^3.6.9",
+		"tailwindcss": "^4.0.0-alpha.14",
+		"typescript": "^5.4.5",
+		"vite": "^5.2.8"
+	},
+	"dependencies": {
+		"bits-ui": "^0.21.2",
+		"clsx": "^2.1.0",
+		"mode-watcher": "^0.3.0",
+		"svelte-radix": "^1.1.0",
+		"tailwind-merge": "^2.2.2",
+		"tailwind-variants": "^0.2.1"
+	},
+	"trustedDependencies": [
+		"@sveltejs/kit",
+		"esbuild",
+		"es5-ext",
+		"svelte-preprocess"
+	]
 }
